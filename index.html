@@ -1,20 +1,83 @@
 <!doctype html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-	<link type='text/css' rel='stylesheet' href='https://rawgit.com/sigmeh/worms/master/worms.css'</link>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>	
+	
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
-	<script type='text/javascript' src='https://rawgit.com/sigmeh/worms/master/worms.js'></script>	
+
+	
+	<script>
+		function con(msg){ console.log(msg) };
+		
+		$(document).ready(function(){
+			$('#container').height( $(window).height() );
+		});
+		$(window).resize(function(){
+			$('#container').height( $(window).height() );
+		});
+		
+	</script>
+	
 </head>
 <body>
 	
-	<div id='buttonBox'>
-		<h4>Draw some worms!</h4><br>
-		<div class='buttonOuter'>
-			<div id='clearButton' class='button' onclick='clearWorms();'>Clear</div>
-		</div>
+	<div id='container'>
+		
+		<div class='headers'>Links to projects hosted here: </div>
+		<br>
+		<div class='button'><a href='https://rawgit.com/sigmeh/worms/master/worms.html'>worms</a></div> 
+			<span class='description'>Draw some worms!</span>
+		<br>
+		<div class='button'><a href='https://rawgit.com/sigmeh/pdqj/master/pdqj.html'>pdqj</a></div> 
+			<span class='description'>A word game in cards</span>
+		
 	</div>
 	
+	
+	<style>
+		.headers{
+			color:rgb(60,60,60);
+		}
+		.description{
+			font-size:12px;
+			margin-left:10px;
+			
+		}
+		a{
+			color:rgb(80,80,80);
+			text-decoration:none;
+			font-family:Helvetica;
+		}
+		body{
+			margin:0px;
+			
+		}
+		.button{
+			border-style:solid;
+			border-color:rgb(16,144,62);
+			border-width:1px;
+			border-radius:5px;
+			padding:3px;
+			display:inline-block;
+			font-family:helvetica;
+			margin-left:20px;
+			margin-bottom:10px;
+			width:60px;
+			text-align:center;
+			font-weight:bold;
+			font-size:14px;
+		}
+		.button:hover{
+			cursor:pointer;
+			background-color:rgb(206,255,219);
+			color:black;
+		}
+		#container{
+			padding:5px;
+			background:url('./media/IMG_5194_lowres.jpg');		
+			background-size: cover;
+		}
+	</style>
 
 </body>
 </html>
